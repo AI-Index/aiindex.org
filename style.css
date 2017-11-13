@@ -1,0 +1,380 @@
+// 
+// IMPORT FONTS
+// 
+@font-face {
+font-family: 'Utopia';
+src: url('fonts/utopia-bold.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Utopia';
+src: url('fonts/utopia-bold.ttf') format('truetype');
+font-weight: bold;
+font-style: normal;
+}
+@font-face {
+font-family: 'Utopia';
+src: url('fonts/utopia-italic-webfont.ttf') format('truetype');
+font-weight: normal;
+font-style: italic;
+}
+@font-face {
+font-family: 'Proxima Nova';
+src: url('fonts/ProximaNova-Regular.otf');
+font-weight: normal;
+font-style: normal;
+}
+@font-face{
+font-family: 'Proxima Nova';
+src: url('fonts/ProximaNova-Bold.otf');
+font-weight: bold;
+font-style: normal;
+}
+@font-face{
+font-family: 'Proxima Nova';
+src: url('fonts/ProximaNova-Italic.otf');
+font-weight: normal;
+font-style: italic;
+}
+@font-face{
+font-family: 'Proxima Nova';
+src: url('fonts/ProximaNova-BoldIt.otf');
+font-weight: bold;
+font-style: italic;
+}
+// 
+// END FONT IMPORT
+// 
+
+// @media (min-width: 576px) {
+//     .container {
+//         max-width: 540px;
+//     }
+// }
+
+// @media (min-width: 768px) {
+//     .container {
+//         max-width: 720px;
+//     }
+// }
+
+// @media (min-width: 992px) {
+//     .container {
+//         max-width: 960px;
+//     }
+// }
+
+// @media (min-width: 1200px) {
+//     .container {
+//         max-width: 1140px;
+//     }
+// }
+
+body {
+    margin: 0px;
+    // margin-left: 0px;
+    // margin-right: 0px;
+}
+
+div {
+    font-family: Proxima Nova;
+    color: #444;
+}
+
+h1 {
+    font-family: Utopia;
+    font-size: 27px;
+    color: #444;
+    padding: 0;
+    margin: 0;
+
+    white-space:nowrap;
+}
+
+.container-fluid .container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+/* HEADER SECTION */
+.index-header {
+    height: 90px;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+}
+
+.index-header-logo {
+    height: 48px;
+    display: inline;
+}
+
+.index-header-buttons {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.header-button {
+    margin: 0 20px;
+    white-space:nowrap;
+    cursor: pointer;
+
+    text-decoration: none;
+    color: #333;
+}
+
+/* HERO SECTION */
+.hero-section {
+    // background-color: #6AC7F5;
+    background: linear-gradient(-90deg, #6bc8f4, #8ff0fc);
+    overflow: auto;
+}
+
+.hero-text {
+    position: relative;
+    margin: auto;
+    margin-top: 60px;
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+
+    /* Hero Text: */
+    letter-spacing: 1.1px;
+    line-height: 23px;
+}
+
+.hero-read {
+    font-size: 20px;
+
+    font-family: Utopia;
+    font-weight: bold;
+    font-style: italic;
+
+    /* Read the 2017 AI Ind: */
+    letter-spacing: 1.1px;
+}
+
+.hero-content {
+    height: 280px;
+}
+
+.hero-report {
+    text-align: center;
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
+.hero-read-underscore {
+    height:5px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.horz-line {
+    position: relative;
+    margin: auto;
+    width: 310px;
+    height: 2px;
+    background-color: #444;
+}
+
+.small-rect {
+    position: absolute;
+    left: 172px;
+    top: -2px;
+    width: 6px;
+    height: 6px;
+    background-color: #444;
+}
+/* END HERO */
+
+/* MISSION SECTION */
+.mission-section {
+
+}
+
+.mission-section > .row {
+    margin-top: 60px;
+}
+
+.mission-content {
+
+}
+
+.mission-ground {
+    margin-top: 8px;
+    color: #333;
+
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+    font-family: utopia;
+}
+
+.mission-index {
+    width: 545px;
+    margin-top: 20px;
+
+    font-size: 16px;
+    letter-spacing: 0.88px;
+    line-height: 26px;
+    margin-bottom: 60px;
+}
+
+.ai-100 {
+    display: inline;
+    text-decoration: none;
+    color: #444;
+    font-style: italic
+}
+
+.report-section {
+    overflow: auto;
+    // background-color: rgba(106, 199, 245, .2);
+    background: linear-gradient(45deg, rgba(110, 200, 245, .25), rgba(140, 240, 250, .25));
+}
+
+.report-description {
+    /* Report Description: */
+    margin-top: 28px;
+    font-size: 16px;
+    color: #444444;
+    letter-spacing: 0.88px;
+    line-height: 26px;
+}
+
+.report-items-container {
+    margin-top: 40px;
+}
+
+.report-items-list {
+    border-right: 2px solid #444;
+}
+
+.report-items-list > div {
+    margin: 20px 0 20px 0;
+
+    /* Volume of Activity: */
+    font-size: 20px;
+    font-family: Utopia;
+    font-weight: normal;
+    font-style: italic;
+    color: #333333;
+    letter-spacing: 1.1px;
+
+    cursor: pointer;
+}
+
+.report-itemdesc {
+    text-align: center;
+    /* Data Description: */
+    // font-size: 20px;
+    font-size: 16px;
+    color: #444444;
+    letter-spacing: 1.1px;
+    line-height: 26px;
+}
+
+.report-itemdesc > div {
+    position: relative;
+    margin-left: 45px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.team-section {
+    overflow: auto;
+    background-color: #f7f8f9;
+}
+
+.teammate > img {
+    width: 100%;
+}
+.teammate > div {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: 0.77px; 
+}
+
+.teammate > div .pt14 {
+    font-size: 14px;
+}
+
+.advisors {
+    font-size: 20;
+    font-family: Utopia;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.sponsor {
+    max-height: 125px;
+    max-width: 300px;
+    margin-right: 50px;
+}
+
+.press-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.press {
+    max-height: 40px;
+    padding: 0px 45px;
+}
+
+.short-underline {
+    height:5px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.short-horz-line {
+    position: relative;
+    margin: auto;
+    width: 280px;
+    height: 2px;
+    background-color: #444;
+}
+
+.short-rect {
+    position: absolute;
+    left: 147px;
+    top: -2px;
+    width: 6px;
+    height: 6px;
+    background-color: #444;
+}
+
+.footer {
+    background-color: 333333;
+}
+
+.footer-buttons > a > img {
+    max-height: 30px;
+    margin-right: 40px;
+}
+
+.footer-buttons {
+    margin-left: auto;
+}
+
+.footer-logo {
+    height: 45px;
+}

@@ -1,0 +1,195 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="style.css">
+    <link src="script.js"/>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="index-header container">
+            <img class="index-header-logo" src="img/index-blue.png"/>
+            <div class="index-header-buttons">
+                <a href="#mission" class="header-button" onclick="scrollTo(this, event)">Mission</a>
+                <a href="#report" class="header-button" onclick="scrollTo(this, event)">2017 Report</a>
+                <!-- <a href="#involved" class="header-button" onclick="scrollTo(this, event)">Get Involved</a> -->
+                <a href="#team" class="header-button" onclick="scrollTo(this, event)">Team</a>
+                <div href="" class="header-button" onclick="scrollTo(this, event)">Data</div>
+            </div>
+        </div>
+        <div class="hero-section">
+            <div class="container">
+                <div class="hero-text">We curate the latest data and trends on<br>artificial intelligence in one place.</div>
+                <div class="hero-content"></div>
+                <div class="hero-report">
+                    <div class="hero-read">Read the 2017 AI Index Report</div>
+                    <div class="hero-read-underscore">
+                        <div class="horz-line"></div>
+                        <div class="small-rect"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mission-section container" id="mission">
+            <div class="row">
+                <h1 class="col-4">Our Mission</h1>
+                <div class="mission-content col-8">
+                    <div class="mission-ground">Ground the conversation about AI in data.</div>
+                    <div class="mission-index">A project within the <a href="https://ai100.stanford.edu" class="ai-100" target="_blank">Stanford 100 Year Study on AI</a>, The AI Index is an initiative to <strong>track</strong>, <strong>collate</strong>, <strong>distill</strong> and <strong>visualize</strong> data relating to artificial intelligence.
+                    <br><br>It aspires to be a comprehensive resource of data and analysis for <strong>policymakers</strong>, <strong>researchers</strong>, <strong>executives</strong>, <strong>journalists</strong> and others to rapidly develop intuitions about the complex field of AI</div>
+                </div>
+            </div>
+        </div>
+        <div class="report-section container-fluid" id="report">
+            <div class="container">
+            <div class="row">
+                <h1 class="col-4" style="margin-top: 50px;">2017 Report</h1>
+            </div>
+            <div class="report-description row col-12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Cras ornare arcu dui vivamus arcu felis bibendum. Cursus vitae congue mauris rhoncus aenean. Volutpat sed
+            </div>
+            <div class="report-items-container row">
+                <div class="report-items-list col-4" id="report-items-list">
+                    <div style="font-weight: bold;" id="volume" onclick="desc_click(this, event)">Volume of Activity</div>
+                    <div id="performance" onclick="desc_click(this, event)">Technical Performance</div>
+                    <div id="derivative" onclick="desc_click(this, event)">Derivative Measures</div>
+                    <div id="human-level" onclick="desc_click(this, event)">Human-Level Performance</div>
+                </div>
+                <div class="report-itemdesc col-8">
+                    <div id="report-desc">
+                    The Volume of Activity measures capture the “how much” aspects: attendance in AI conferences, venture capital investments in AI companies, and so on.
+                    </div>
+                </div>
+            </div>
+            <div class="hero-report" style="margin-top: 70px;">
+                <div class="hero-read">Read the 2017 AI Index Report</div>
+                <div class="hero-read-underscore">
+                    <div class="horz-line"></div>
+                    <div class="small-rect"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="team-section container-fluid" id="team">
+            <div class="container">
+                <div class="row">
+                    <h1 class="col-4" style="margin-top: 50px;">Team</h1>
+                </div>
+                <div class="row" style="margin-top: 28px; margin-bottom: 40px;">
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div class="pt14">Erik Brynjolfsson</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div>Jack Clarke</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div>Ray Perrault</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div>Yoav Shoam</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div class="pt14">Calvin LeGassick</div>
+                    </div>
+                </div>
+                <!-- ADVISORS -->
+                <div class="row">
+                    <div class="col-4 advisors">Advisors</div>
+                </div>
+                <div class="row" style="margin-top: 28px">
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div class="pt14">Erik Brynjolfsson</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div>Jack Clarke</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div>Ray Perrault</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div>Yoav Shoam</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div class="pt14">Calvin LeGassick</div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 28px">
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div class="pt14">Erik Brynjolfsson</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div>Jack Clarke</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div>Ray Perrault</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div>Yoav Shoam</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div class="pt14">Calvin LeGassick</div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 28px">
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div class="pt14">Erik Brynjolfsson</div>
+                    </div>
+                    <div class="teammate col-2">
+                        <img src="img/calvin.png"/>
+                        <div>Jack Clarke</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1 style="margin-top: 28px;">Sponsors</h1>
+                </div>
+                <div class="row" style="margin-bottom: 60px;">
+                    <div style="margin-top: 60px; display: flex; align-items: center;">
+                        <img class="sponsor" src="img/google.png"/>
+                        <img class="sponsor" src="img/microsoft.png"/>
+                        <img class="sponsor" src="img/tencent.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="press-section">
+            <!-- Title -->
+            <h1 style="margin-top: 60px;">Press</h1>
+            <div class="short-underline">
+                <div class="short-horz-line"></div>
+                <div class="short-rect"></div>
+            </div>
+
+            <!-- Press Links -->
+            <div style="margin-top: 60px;">
+                <a href="" style="display: inline"><img class="press" src="img/wired.png"/></a>
+                <a href="" style="display: inline"><img class="press" src="img/ai-mag.png"/></a>
+            </div>
+        </div>
+        <div class="footer container-fluid">
+            <div class="container" style="height: 90px; display: flex; align-items:center;">
+                <img class="footer-logo" src="img/index-white.png"/>
+                <div class="footer-buttons">
+                    <a href="https://twitter.com/indexingai" target="_blank"><img class="footer-button" src="img/twitter.png"/></a>
+                    <a href="https://www.linkedin.com/company/" target="_blank"><img class="footer-button" src="img/linkedin.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
