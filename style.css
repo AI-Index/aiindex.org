@@ -235,7 +235,6 @@ textarea, input, button { outline: none; }
 }
 
 .hero-read-link {
-    /*text-decoration: none;*/
     color: #d7dce2;
     font-style: italic
 }
