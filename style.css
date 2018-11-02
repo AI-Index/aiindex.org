@@ -69,36 +69,11 @@ font-weight: 600;
 font-style: normal;
 }
 
-// 
-// END FONT IMPORT
-// 
-
-
-// @media (min-width: 768px) {
-//     .container {
-//         max-width: 720px;
-//     }
-// }
-
-// @media (min-width: 992px) {
-//     .container {
-//         max-width: 960px;
-//     }
-// }
-
-// @media (min-width: 1200px) {
-//     .container {
-//         max-width: 1140px;
-//     }
-// }
 
 html, body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-
-    // margin-left: 0px;
-    // margin-right: 0px;
 }
 
 div, p {
@@ -188,20 +163,12 @@ h1 {
 
 .hero-text {
     position: relative;
-    margin: auto;
-    margin-top: 70px;
-
+    margin-left: 20px;
     font-family: Utopia;
     font-style: italic;
-    text-align: center;
-    font-size: 18px;
-    /*font-weight: 600;*/
-
-    /* Hero Text: */
+    font-size: 16px;
     letter-spacing: .99px;
-    line-height: 40px;
-
-    margin-bottom: 50px;
+    line-height: 25px;
 }
 
 textarea, input, button { outline: none; }
@@ -231,6 +198,7 @@ textarea, input, button { outline: none; }
     position: relative;
     margin: auto;
     margin-bottom: 80px;
+    margin-top: 80px;
 
     background-color: white;
     border-radius: 5px;
@@ -249,6 +217,12 @@ textarea, input, button { outline: none; }
     text-align: left;
     padding-top: 45px;
     padding-bottom: 35px;
+}
+
+.hero-read-text-header {
+    font-size: 26px;
+    letter-spacing: 1.43px;
+    font-family: utopia;
 }
 
 .report-row {
@@ -472,9 +446,7 @@ textarea, input, button { outline: none; }
 }
 
 .team-section {
-    // overflow: auto;
     background-color: #f7f8f9;
-    // padding-bottom: 30px;
 }
 
 .teammate {
@@ -592,7 +564,6 @@ textarea, input, button { outline: none; }
 }
 
 #mission, #report, #header, #read, #team, #sponsors, #footer {
-    // padding: 10px 10px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -661,6 +632,12 @@ textarea, input, button { outline: none; }
 
 @media (max-width: 575px) {
     .no-small {
+        display:none;
+    }
+}
+
+@media (max-width: 992px) {
+    .large-only {
         display:none;
     }
 }
