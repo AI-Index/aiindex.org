@@ -192,8 +192,8 @@ textarea, input, button { outline: none; }
 
     min-width: 275px;
     max-width: 650px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
 
     position: relative;
     margin: auto;
@@ -223,7 +223,7 @@ textarea, input, button { outline: none; }
 }
 
 .hero-read-text-header {
-    font-size: 32px;
+    font-size: 39px;
     letter-spacing: 1.43px;
     font-family: utopia;
 }
@@ -232,6 +232,12 @@ textarea, input, button { outline: none; }
     font-size: 19.4px;
     letter-spacing: 0.5px;
     font-family: utopia;
+}
+
+.hero-read-link {
+    /*text-decoration: none;*/
+    color: #d7dce2;
+    font-style: italic
 }
 
 .report-row {
