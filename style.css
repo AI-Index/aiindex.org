@@ -43,15 +43,36 @@ src: url('fonts/ProximaNova-BoldIt.otf');
 font-weight: bold;
 font-style: italic;
 }
+
+@font-face {
+font-family: 'Calibre';
+src: url('fonts/calibre.ttf');
+font-weight: normal;
+font-style: normal;
+}
+@font-face{
+font-family: 'Calibre';
+src: url('fonts/calibre-bold.ttf');
+font-weight: bold;
+font-style: normal;
+}
+@font-face {
+font-family: 'Calibre';
+src: url('fonts/calibre-italic.otf');
+font-weight: normal;
+font-style: italic;
+}
+@font-face{
+font-family: 'Calibre';
+src: url('fonts/calibre-medium.ttf');
+font-weight: 600;
+font-style: normal;
+}
+
 // 
 // END FONT IMPORT
 // 
 
-// @media (min-width: 576px) {
-//     .container {
-//         max-width: 540px;
-//     }
-// }
 
 // @media (min-width: 768px) {
 //     .container {
@@ -71,14 +92,19 @@ font-style: italic;
 //     }
 // }
 
-body {
+html, body {
     margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
     // margin-left: 0px;
     // margin-right: 0px;
 }
 
-div {
-    font-family: Proxima Nova;
+div, p {
+    /*font-family: Proxima Nova;*/
+    font-family: Calibre;
+    /*font-family: Lato;*/
     color: #444;
 }
 
@@ -90,6 +116,28 @@ h1 {
     margin: 0;
 
     white-space:nowrap;
+}
+
+.link {
+    display: inline;
+    text-decoration: none;
+    color: #444;
+    font-style: italic
+}
+
+#mc_embed_signup input.email {
+    margin-left: 50px;
+}
+
+.no-dec {
+    text-decoration: none;
+}
+
+.centered-column {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-fluid .container {
@@ -106,7 +154,8 @@ h1 {
 .index-header {
     height: 90px;
     display: flex;
-    font-weight: bold;
+    // font-weight: bold;
+    font-weight: 600;
     align-items: center;
 }
 
@@ -140,37 +189,101 @@ h1 {
 .hero-text {
     position: relative;
     margin: auto;
-    margin-top: 60px;
-
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-
-    /* Hero Text: */
-    letter-spacing: 1.1px;
-    line-height: 23px;
-}
-
-.hero-read {
-    font-size: 20px;
+    margin-top: 70px;
 
     font-family: Utopia;
-    font-weight: bold;
     font-style: italic;
+    text-align: center;
+    font-size: 18px;
+    /*font-weight: 600;*/
 
-    /* Read the 2017 AI Ind: */
-    letter-spacing: 1.1px;
+    /* Hero Text: */
+    letter-spacing: .99px;
+    line-height: 40px;
+
+    margin-bottom: 50px;
 }
 
+textarea, input, button { outline: none; }
+
+
 .hero-content {
-    height: 280px;
+    // height: 280px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.report-img {
+    height: 225px;
+    width: auto;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.25);
 }
 
 .hero-report {
+
+    min-width: 275px;
+    max-width: 650px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    position: relative;
+    margin: auto;
+    margin-bottom: 80px;
+
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px 5px rgba(0,0,0,0.10);
+
+    font-size: 22px;
+
     text-align: center;
-    margin-bottom: 60px;
-    cursor: pointer;
 }
+
+.hero-read {
+    margin-top: 6px;
+    letter-spacing: 1.1px;
+    color: #444;
+    display: inline-block;
+    text-align: left;
+    padding-top: 45px;
+    padding-bottom: 35px;
+}
+
+.report-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.report-lang {
+    display: inline-block;
+    font-size: 22px;
+    width: 82px;
+}
+
+.icon-wrapper {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+}
+
+.report-icon {
+    height: 15px;
+}
+
+.report-writer {
+    display: inline-block;
+    vertical-align: middle;
+    font-style: italic;
+    /*width: 200px;*/
+    width: 150px;
+}
+
+.grey {
+    color: #C8C8C8;
+}
+
 
 .hero-read-underscore {
     height:5px;
@@ -179,6 +292,10 @@ h1 {
     position: relative;
     margin: auto;
     margin-top: 10px;
+}
+
+.report-writer {
+    font-size: 12px;
 }
 
 .horz-line {
@@ -200,8 +317,13 @@ h1 {
 /* END HERO */
 
 /* MISSION SECTION */
+
 .mission-section {
 
+}
+
+.mission-title {
+    padding-bottom: 20px;
 }
 
 .mission-section > .row {
@@ -214,6 +336,7 @@ h1 {
 
 .mission-ground {
     margin-top: 8px;
+    margin-left: -2px;
     color: #333;
 
     font-size: 20px;
@@ -223,7 +346,7 @@ h1 {
 }
 
 .mission-index {
-    width: 545px;
+    max-width: 545px;
     margin-top: 20px;
 
     font-size: 16px;
@@ -240,62 +363,123 @@ h1 {
 }
 
 .report-section {
-    overflow: auto;
+    // overflow: auto;
     // background-color: rgba(106, 199, 245, .2);
     background: linear-gradient(45deg, rgba(110, 200, 245, .25), rgba(140, 240, 250, .25));
 }
 
 .report-description {
     /* Report Description: */
-    margin-top: 28px;
+    // margin-top: 28px;
     font-size: 16px;
     color: #444444;
     letter-spacing: 0.88px;
     line-height: 26px;
 }
 
-.report-items-container {
-    margin-top: 40px;
-}
-
 .report-items-list {
     border-right: 2px solid #444;
 }
 
-.report-items-list > div {
-    margin: 20px 0 20px 0;
-
-    /* Volume of Activity: */
-    font-size: 20px;
-    font-family: Utopia;
-    font-weight: normal;
-    font-style: italic;
-    color: #333333;
-    letter-spacing: 1.1px;
-
-    cursor: pointer;
+.report-items {
+    padding-top: 40px;
 }
 
-.report-itemdesc {
-    text-align: center;
+.report-item {
+    padding-bottom: 50px;
+}
+
+.report-item > div {
+    margin-top: 20px;
+}
+
+.report-item > h1 {
+    color: #333;
+}
+
+.report-item-desc {
     /* Data Description: */
-    // font-size: 20px;
     font-size: 16px;
     color: #444444;
-    letter-spacing: 1.1px;
+    letter-spacing: 0.88px;
     line-height: 26px;
 }
 
-.report-itemdesc > div {
-    position: relative;
-    margin-left: 45px;
-    margin-top: 10px;
+.expert {
+    display: inline-block;
+    width: 49%;
     text-align: left;
+    // padding: 0px 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin: 10px 0;
+}
+
+.expert > :first-child {
+    width: 150px;
+    display: inline-block;
+}
+
+.affiliation {
+    padding: 5px 5px 0px 5px;
+    margin-left: 10px;
+    display: inline;
+
+    font-weight: normal;
+    font-style: italic;
+    color: rgb(120, 120, 120);
+    background-color: rgba(128, 128, 128, .1);
+}
+
+.read-section {
+    // overflow: auto;
+    background-color: #F2F3F3;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.how-can {
+    // padding-top: 70px;
+    // padding-bottom: 70px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 27px;
+    font-weight: 600; 
+}
+
+.up-to-date {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 27px;
+}
+
+.read-wrapper {
+    padding: 20px;
+    border: 5px solid black;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    cursor: pointer;
+}
+
+.read-text {
+    margin-top: 5px;
+    font-size: 22px;
+    letter-spacing: 1.21px;
+    white-space:nowrap;
 }
 
 .team-section {
-    overflow: auto;
+    // overflow: auto;
     background-color: #f7f8f9;
+    // padding-bottom: 30px;
+}
+
+.teammate {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .teammate > img {
@@ -309,8 +493,15 @@ h1 {
     letter-spacing: 0.77px; 
 }
 
-.teammate > div .pt14 {
-    font-size: 14px;
+.handle {
+    text-decoration: none;
+    color: #54abef;
+    font-style: italic;
+}
+
+.weblink {
+    height: 15px;
+    margin-right: 10px;
 }
 
 .advisors {
@@ -324,16 +515,20 @@ h1 {
     max-height: 125px;
     max-width: 300px;
     margin-right: 50px;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .press-section {
-    text-align: center;
+    text-align: left;
     margin-bottom: 60px;
 }
 
-.press {
+.press > img {
     max-height: 40px;
-    padding: 0px 45px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .short-underline {
@@ -377,4 +572,95 @@ h1 {
 
 .footer-logo {
     height: 45px;
+}
+
+.sail-section {
+
+}
+
+.sail-desc {
+    font-size: 26px;
+    margin-top: 80px;
+    font-weight: 600;
+}
+
+.sail-logo {
+    height: 200px;
+    width: auto;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+#mission, #report, #header, #read, #team, #sponsors, #footer {
+    // padding: 10px 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 768px) {
+
+   .teammate, .teammate > div {
+        text-align: left;
+   }
+
+   .team-img {
+        display: none;
+   }
+
+   .teammate > div {
+        display: inline-block;
+        font-weight: 600;
+        width: 200px;
+    }
+
+    .expert {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .med {
+        display:none;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-can, .up-to-date {
+        // font-size: 18px;
+        text-align: center;
+    }
+
+    .up-to-date {
+        padding-top: 0px;
+        padding-bottom: 35px;
+    }
+
+    .small-pad {
+        padding-bottom: 70px;
+    }
+
+    .read-wrapper {
+        margin-bottom: 60px;
+    }
+    .no-med {
+        display:none;
+    }
+
+    .teammate > div .no-med {
+        display: none;
+    }
+
+    .sail-logo {
+        height: 120px;
+    }
+
+    .sail-desc {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 575px) {
+    .no-small {
+        display:none;
+    }
 }

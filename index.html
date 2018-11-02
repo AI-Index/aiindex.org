@@ -1,103 +1,250 @@
 <html>
 <head>
+    <title>AI Index</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110474970-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110474970-1');
+    </script>
+
+    <!-- Mailchimp styles -->
+    <link href="https://cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+    </style>
+
+    <!-- Bootsrap grid -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-grid.css">
+
+    <!-- My styles -->
     <link rel="stylesheet" href="style.css">
     <link src="script.js"/>
+
+    <!-- Rendering on Facebook / Twitter -->
+    <meta property="og:site_name" content="AI Index"/>
+    <meta property="og:title" content="Grounding the conversation about Artificial Intelligence."/>
+    <meta property="og:description" content="The AI Index is an open, not-for-profit project to track activity and progress in AI."/><!-- 167 chars  -->
+    <meta property="og:image" content="https://aiindex.org/img/meta-blue-logo.png">
+    <meta property="og:url" content="https://aiindex.org">
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@indexingai">
 </head>
 <body>
     <div class="container-fluid">
-        <div class="index-header container">
+        <div class="index-header container" id="header">
             <img class="index-header-logo" src="img/index-blue.png"/>
-            <div class="index-header-buttons">
+            <div class="index-header-buttons no-small">
                 <a href="#mission" class="header-button" onclick="scrollTo(this, event)">Mission</a>
                 <a href="#report" class="header-button" onclick="scrollTo(this, event)">2017 Report</a>
                 <!-- <a href="#involved" class="header-button" onclick="scrollTo(this, event)">Get Involved</a> -->
                 <a href="#team" class="header-button" onclick="scrollTo(this, event)">Team</a>
-                <div href="" class="header-button" onclick="scrollTo(this, event)">Data</div>
+                <a href="https://bit.ly/ai-index-data" target="_blank" class="header-button">Data</a>
             </div>
         </div>
-        <div class="hero-section">
+        <div class="hero-section" style="background-image: url('img/shapes-background-3.png'); background-size: cover; background-position: center;">
             <div class="container">
                 <div class="hero-text">We curate the latest data and trends on<br>artificial intelligence in one place.</div>
-                <div class="hero-content"></div>
-                <div class="hero-report">
-                    <div class="hero-read">Read the 2017 AI Index Report</div>
-                    <div class="hero-read-underscore">
-                        <div class="horz-line"></div>
-                        <div class="small-rect"></div>
+                <div style="margin-left:20px; margin-right:20px;">
+                    <div class="hero-report">
+                        <!-- <a href="http://cdn.aiindex.org/2017-report.pdf" class="no-dec" target="_blank"> -->
+                        <div class="hero-read">
+                            <div style="padding-bottom: 20px;"><span style="font-size 26px; font-weight: bold; letter-spacing: 1.43px;">Read the 2017 AI Index Report</span></div>
+                            <a href="http://cdn.aiindex.org/2017-report.pdf" class="no-dec" target="_blank">
+                            <div class="report-row">
+                                    <div class="report-lang">English</div>
+                                    <div class="icon-wrapper"><img class="report-icon" src="img/paper.png"/></div>
+                                    <div class="report-writer">by the AI Index team</div>
+                            </div>
+                            </a>
+                            <a href="http://cdn.aiindex.org/AI-Index-2017-Chinese-Translation.pdf" class="no-dec" target="_blank">
+                            <div class="report-row">
+                                <div class="report-lang">Chinese</div>
+                                <div class="icon-wrapper"><img class="report-icon" src="img/paper.png"/></div>
+                                <div class="report-writer">translation by ByteDance & Synced</div>
+                            </div>
+                            </a>
+                            <a href="http://cdn.aiindex.org/AI-Index-2017-Urdu-Translation.pdf" class="no-dec" target="_blank">
+                            <div class="report-row">
+                                <div class="report-lang">Urdu</div>
+                                <div class="icon-wrapper"><img class="report-icon" src="img/paper.png"/></div>
+                                <div class="report-writer">translation by Zeeshan-ul-hassan Usmani</div>
+                            </div>
+                            </a>
+                            <a href="http://cdn.aiindex.org/AI-Index-2017-Korean-Translation.pdf" class="no-dec" target="_blank">
+                            <div class="report-row">
+                                <div class="report-lang">Korean</div>
+                                <div class="icon-wrapper"><img class="report-icon" src="img/paper.png"/></div>
+                                <div class="report-writer">translation by Sanghun Lee & Donghun Lee</div>
+                            </div>
+                            </a>
+                            <!-- <div class="report-row">
+                                <div class="report-lang grey">Korean</div>
+                                <div style = "width: 60px; display: inline-block;"></div>
+                                <div class="report-writer grey">coming soon</div>
+                            </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="mission-section container" id="mission">
             <div class="row">
-                <h1 class="col-4">Our Mission</h1>
-                <div class="mission-content col-8">
+                <h1 class="mission-title col-md-4 col-sm-12">Our Mission</h1>
+                <div class="mission-content col-md-8 col-sm-12">
                     <div class="mission-ground">Ground the conversation about AI in data.</div>
-                    <div class="mission-index">A project within the <a href="https://ai100.stanford.edu" class="ai-100" target="_blank">Stanford 100 Year Study on AI</a>, The AI Index is an initiative to <strong>track</strong>, <strong>collate</strong>, <strong>distill</strong> and <strong>visualize</strong> data relating to artificial intelligence.
+                    <div class="mission-index">A project within the <a href="https://ai100.stanford.edu" class="link" target="_blank">Stanford 100 Year Study on AI (AI 100)</a>, The AI Index is an initiative to <strong>track</strong>, <strong>collate</strong>, <strong>distill</strong> and <strong>visualize</strong> data relating to artificial intelligence.
                     <br><br>It aspires to be a comprehensive resource of data and analysis for <strong>policymakers</strong>, <strong>researchers</strong>, <strong>executives</strong>, <strong>journalists</strong> and others to rapidly develop intuitions about the complex field of AI</div>
                 </div>
             </div>
         </div>
-        <div class="report-section container-fluid" id="report">
+        <div class="report-section" id="report">
             <div class="container">
             <div class="row">
                 <h1 class="col-4" style="margin-top: 50px;">2017 Report</h1>
             </div>
-            <div class="report-description row col-12">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Cras ornare arcu dui vivamus arcu felis bibendum. Cursus vitae congue mauris rhoncus aenean. Volutpat sed
+            <div class="report-description row">
+                <p class="col-12">
+                This report aggregates a diverse set of data, makes that data accessible, and includes discussion about what is provided and what is missing. Most importantly, <span style="/*font-style: italic; font-weight: 600; white-space: nowrap;*/">the AI Index 2017 Report is a starting point</span> for the conversation about rigorously measuring activity and progress in AI in the future.
+                </p>
             </div>
-            <div class="report-items-container row">
-                <div class="report-items-list col-4" id="report-items-list">
-                    <div style="font-weight: bold;" id="volume" onclick="desc_click(this, event)">Volume of Activity</div>
-                    <div id="performance" onclick="desc_click(this, event)">Technical Performance</div>
-                    <div id="derivative" onclick="desc_click(this, event)">Derivative Measures</div>
-                    <div id="human-level" onclick="desc_click(this, event)">Human-Level Performance</div>
-                </div>
-                <div class="report-itemdesc col-8">
-                    <div id="report-desc">
-                    The Volume of Activity measures capture the “how much” aspects: attendance in AI conferences, venture capital investments in AI companies, and so on.
+            <div class="report-items row">
+                <div class="report-item col-md-6 col-sm-12">
+                    <h1 style="font-size: 20px">Volume of Activity</h1>
+                    <div class="report-item-desc">
+                        The Volume of Activity metrics capture the "how much" aspects of the field, like attendance at AI conferences and VC investments into startups developing AI systems.
                     </div>
                 </div>
-            </div>
-            <div class="hero-report" style="margin-top: 70px;">
-                <div class="hero-read">Read the 2017 AI Index Report</div>
-                <div class="hero-read-underscore">
-                    <div class="horz-line"></div>
-                    <div class="small-rect"></div>
+                <div class="report-item col-md-6 col-sm-12">
+                    <h1 style="font-size: 20px">Technical Performance</h1>
+                    <div class="report-item-desc">
+                        The Technical Performance metrics capture the "how good" aspects; for example, how well computers can understand images and prove mathematical theorems.
+                    </div>
                 </div>
+                <div class="report-item col-md-6 col-sm-12">
+                    <h1 style="font-size: 20px">Derivative Measures</h1>
+                    <div class="report-item-desc">
+                        We investigate the relationship between trends. We also introduce an exploratory measure, the AI Vibrancy Index, that combines trends across academia and industry to quantify the liveliness of AI as a field.
+                    </div>
+                </div>
+                <div class="report-item col-md-6 col-sm-12">
+                    <h1 style="font-size: 20px">Towards Human Peformance</h1>
+                    <div class="report-item-desc">
+                        We outline a short list of notable areas where AI systems have made significant progress towards matching or exceeding human performance. We also discuss the difficulties of such comparisons.
+                    </div>
+                </div>
+                <div class="report-item col-md-12 col-sm-12">
+                    <h1 style="font-size: 20px">Expert Forum</h1>
+                    <div class="report-item-desc">
+                        We include subjective commentary from a cross-section of AI experts. This Expert Forum helps animate the story behind the data in the report and adds interpretation the report lacks.
+                    </div>
+                <!-- <div class="report-item col-md-6 col-sm-12"> -->
+                <!-- <div class="report-item col-12"> -->
+                    <!-- <h1 style="font-size: 20px; opacity: 0;">.</h1> -->
+                    <div class="report-item-desc">
+                        <div class="expert"><div>Susan Alzner</div><div class="affiliation">UN-NGLS</div></div>
+                        <div class="expert"><div>Barbara Grosz</div><div class="affiliation">Harvard</div></div>
+                        <div class="expert"><div>Eric Horvitz</div><div class="affiliation">Microsoft</div></div>
+                        <div class="expert"><div>Kai-Fu Lee</div><div class="affiliation">Sinovation Ventures</div></div>
+                        <div class="expert"><div>Alan Mackworth </div><div class="affiliation">UBC</div></div>
+                        <div class="expert"><div>Andrew Ng </div><div class="affiliation">Stanford, Coursera</div></div>
+                        <div class="expert"><div>Daniela Rus</div><div class="affiliation">MIT</div></div>
+                        <div class="expert"><div>Megan Smith</div><div class="affiliation">USA CTO, shift7</div></div>
+                        <div class="expert"><div>Sebastian Thrun</div><div class="affiliation">Stanford, Udacity</div></div>
+                        <div class="expert"><div>Michael Wooldridge</div><div class="affiliation">Oxford</div></div>
+                    </div>
+                <!-- </div> -->
+                </div>
+
             </div>
             </div>
+        </div>
+        <div class="read-section" id="read">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 how-can no-med">How can we measure<br>activity and progress<br>in Artificial Intelligence?</div>
+                    <div class="col-md-6 how-can med">How can we measure activity and progress in Artificial Intelligence?</div>
+                    <div class="col-md-6 centered-column">
+                        <a href="http://cdn.aiindex.org/2017-report.pdf" class="no-dec" target="_blank">
+                            <div class="read-wrapper">
+                                <div class="read-text">Read the 2017 AI Index Report</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 up-to-date">Stay up to date</div>
+                    <div class="col-md-6 centered-column small-pad">
+                        <div id="mc_embed_signup" style="background: none; font-family: Calibre; font-weight: normal;">
+                            <form action="https://aiindex.us16.list-manage.com/subscribe/post?u=da3ba0ba4811d77002d607123&amp;id=af4dc4738a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="text-align: center; padding: 0px;">
+                                <div id="mc_embed_signup_scroll">
+                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required style="display: inline-block; width: 250px; margin: 0px; height: 35px;">
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_da3ba0ba4811d77002d607123_af4dc4738a" tabindex="-1" value=""></div>
+                                <div class="clear" style="display: inline-block"><input style="margin: 0; background-color: #444; font-weight: 600; color: #444; background-color: white; border: 1px solid #444; height: 36px;" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> 
         </div>
         <div class="team-section container-fluid" id="team">
             <div class="container">
                 <div class="row">
                     <h1 class="col-4" style="margin-top: 50px;">Team</h1>
                 </div>
-                <div class="row" style="margin-top: 28px; margin-bottom: 40px;">
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div class="pt14">Erik Brynjolfsson</div>
+                <div class="row" style="margin-top: 28px;">
+                    <div class="teammate col-md-2 col-sm-12">
+                        <img class="team-img" src="img/yoav.jpeg"/>
+                        <div>Yoav Shoham (Chair)</div>
+                        <a href="http://robotics.stanford.edu/users/shoham/" target="_blank"><img class="weblink" src="img/link.svg"/></a>
                     </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div>Jack Clarke</div>
-                    </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
+                    <div class="teammate col-md-2 col-sm-12">
+                        <img class="team-img" src="img/ray.jpg"/>
                         <div>Ray Perrault</div>
+                        <a href="https://www.sri.com/about/people/c-raymond-perrault" target="_blank"><img class="weblink" src="img/link.svg"/></a>
                     </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div>Yoav Shoam</div>
+                    <div class="teammate col-md-2 col-sm-12">
+                        <img class="team-img" src="img/erik.jpg"/>
+                        <div class="pt14">Erik Brynjolfsson</div>
+                        <a href="http://ebusiness.mit.edu/erik/" target="_blank"><img class="weblink" src="img/link.svg"/></a>
+                        <a class="handle pt14" href="https://twitter.com/erikbryn" target="_blank"><img class="weblink" src="img/twitter2.png"/></a>
                     </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div class="pt14">Calvin LeGassick</div>
+                    <div class="teammate col-md-2 col-sm-12">
+                        <!-- <img src="img/jack.jpeg"/> -->
+                        <img class="team-img" src="img/jack-colorized.png"/>
+                        <div>Jack Clark</div>
+                        <a href="https://jack-clark.net/" target="_blank"><img class="weblink" src="img/link.svg"/></a>
+                        <a class="handle" href="https://twitter.com/jackclarksf" target="_blank"><img class="weblink" src="img/twitter2.png"/></a>
+                    </div>
+                    <div class="teammate col-md-2 col-sm-12">
+                        <!-- <img src="img/jack.jpeg"/> -->
+                        <img class="team-img" src="img/james.jpg"/>
+                        <div>James Manyika</div>
+                        <a href="https://www.mckinsey.com/our-people/james-manyika" target="_blank"><img class="weblink" src="img/link.svg"/></a>
+                        <a class="handle" href="https://twitter.com/McKinsey_MGI" target="_blank"><img class="weblink" src="img/twitter2.png"/></a>
+                    </div>
+                    <div class="teammate col-md-2 col-sm-12">
+                        <img class="team-img" src="img/calvin.png"/>
+                        <div>Calvin LeGassick<br><span class="no-med">(Project Manager)</span></div>
+                        <a href="https://linkedin.com/in/calvinlegassick" target="_blank"><img class="weblink" src="img/link.svg"/></a>
+                        <a class="handle" href="https://twitter.com/CalvinLeGassick" target="_blank"><img class="weblink" src="img/twitter2.png"/></a>
+                        <div style="margin-left: -3px; margin-top: 2px; display: block; font-weight: normal;"><span class="med">(Project Manager)</span></div>
                     </div>
                 </div>
                 <!-- ADVISORS -->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-4 advisors">Advisors</div>
                 </div>
                 <div class="row" style="margin-top: 28px">
@@ -105,87 +252,41 @@
                         <img src="img/calvin.png"/>
                         <div class="pt14">Erik Brynjolfsson</div>
                     </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div>Jack Clarke</div>
-                    </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div>Ray Perrault</div>
-                    </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div>Yoav Shoam</div>
-                    </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div class="pt14">Calvin LeGassick</div>
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 28px">
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div class="pt14">Erik Brynjolfsson</div>
-                    </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div>Jack Clarke</div>
-                    </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div>Ray Perrault</div>
-                    </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div>Yoav Shoam</div>
-                    </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div class="pt14">Calvin LeGassick</div>
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 28px">
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div class="pt14">Erik Brynjolfsson</div>
-                    </div>
-                    <div class="teammate col-2">
-                        <img src="img/calvin.png"/>
-                        <div>Jack Clarke</div>
-                    </div>
-                </div>
+                </div> -->
                 <div class="row">
-                    <h1 style="margin-top: 28px;">Sponsors</h1>
+                    <h1 class="col-4" style="margin-top: 28px;">Sponsors</h1>
                 </div>
-                <div class="row" style="margin-bottom: 60px;">
-                    <div style="margin-top: 60px; display: flex; align-items: center;">
-                        <img class="sponsor" src="img/google.png"/>
-                        <img class="sponsor" src="img/microsoft.png"/>
-                        <img class="sponsor" src="img/tencent.png"/>
+                <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+                    <div class="col-lg-4 col-md-12"><img class="sponsor" src="img/google3.png"/></div>
+                    <div class="col-lg-4 col-md-12"><img class="sponsor" src="img/ms2.png"/></div>
+                    <div class="col-lg-4 col-md-12"><img class="sponsor" src="img/bytedance.png"/></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="press-section">
-            <!-- Title -->
-            <h1 style="margin-top: 60px;">Press</h1>
-            <div class="short-underline">
-                <div class="short-horz-line"></div>
-                <div class="short-rect"></div>
-            </div>
-
-            <!-- Press Links -->
-            <div style="margin-top: 60px;">
-                <a href="" style="display: inline"><img class="press" src="img/wired.png"/></a>
-                <a href="" style="display: inline"><img class="press" src="img/ai-mag.png"/></a>
+        <div class="j-section container-fluid" id="team">
+            <div class="container">
+                <div style="width: 100%; text-align: center;">
+                    <div class="sail-desc">The AI Index is a project of the <a class="link" href="https://ai100.stanford.edu" target="_blank">AI 100</a>, and is hosted at the <a class="link" href="https://ai.stanford.edu" target="_blank">Stanford AI Lab (SAIL)</div>
+                    <a href="https://ai.stanford.edu" target="_blank"><img class = "sail-logo" src="img/AI-Horiz_rgb.png"/></a>
+                </div>
             </div>
         </div>
-        <div class="footer container-fluid">
+        <!-- <div class="press-section container">
+            <div class="row">
+                <h1 class="col-4" style="margin-top: 60px; margin-bottom: 30px;">Press</h1>
+            </div>
+            <div class="row" style="text-align: left;">
+                <a class="col-md-4 press" href="" style="display: inline"><img src="img/wired.png"/></a>
+                <a class="col-md-4 press" href="" style="display: inline"><img  src="img/ai-mag.png"/></a>
+            </div>
+        </div> -->
+        <div class="footer container-fluid" id=footer>
             <div class="container" style="height: 90px; display: flex; align-items:center;">
-                <img class="footer-logo" src="img/index-white.png"/>
+                <a href="#header" onclick="scrollTo(this, event)"><img class="footer-logo" src="img/index-white.png"/></a>
                 <div class="footer-buttons">
                     <a href="https://twitter.com/indexingai" target="_blank"><img class="footer-button" src="img/twitter.png"/></a>
-                    <a href="https://www.linkedin.com/company/" target="_blank"><img class="footer-button" src="img/linkedin.png"/></a>
+                    <a href="https://www.linkedin.com/company/18178884/" target="_blank"><img class="footer-button" src="img/linkedin.png"/></a>
                 </div>
             </div>
         </div>
