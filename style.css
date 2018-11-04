@@ -153,9 +153,15 @@ h1 {
 }
 
 /* HERO SECTION */
+.hero-wrapper {
+    background-color: rgb(0, 27, 31);
+}
+
+
 .hero-section {
-    // background-color: #6AC7F5;
-    background: linear-gradient(-90deg, #6bc8f4, #8ff0fc);
+    background-image: url('img/hero-background-2018.png');
+    background-size: cover; 
+    background-position: center;
     overflow: auto;
 }
 
