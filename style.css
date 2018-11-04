@@ -466,6 +466,10 @@ textarea, input, button { outline: none; }
     background-color: #f7f8f9;
 }
 
+.team-row {
+    margin-top: 28px;
+}
+
 .teammate {
     text-align: center;
     margin-bottom: 30px;
@@ -642,6 +646,10 @@ textarea, input, button { outline: none; }
         display: none;
     }
 
+    .team-row-2 {
+        margin-top: 0px;   
+    }
+
     .sail-logo {
         height: 120px;
     }
@@ -652,6 +660,7 @@ textarea, input, button { outline: none; }
 }
 
 @media (max-width: 575px) {
+
     .no-small {
         display:none;
     }
